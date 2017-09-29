@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Demo18._09
+{
+    class HomeWork2109
+    {
+        static void Main(string[] args)
+        {
+            int fistNumber = int.Parse(Console.ReadLine());
+            int secondNumber = int.Parse(Console.ReadLine());
+
+            int smallerNumber = Math.Min(fistNumber, secondNumber);
+            int biggerNumber = Math.Max(fistNumber, secondNumber);
+
+            for (int i = smallerNumber; i <= biggerNumber; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+        }
+    }
+}

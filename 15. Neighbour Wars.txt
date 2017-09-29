@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Demo18._09
+{
+    class HomeWork2109
+    {
+        static void Main(string[] args)
+        {
+
+            int peshosDamage = int.Parse(Console.ReadLine());
+            int goshosDamage = int.Parse(Console.ReadLine());
+
+            int peshosHealth = 100;
+            int goshosHealth = 100;
+
+            string peshosPunch = "Roundhouse kick";
+            string goshosPunch = "Thunderous fist";
+
+            for (int i = 1; i <= 100; i++)
+            {
+                if (i % 2 != 0)
+                {
+                   goshosHealth = goshosHealth - peshosDamage;
+                    if (goshosHealth <= 0)
+                    {
+                      Console.WriteLine($"Pesho won in {i}th round.");
+                        return;
+                    }                    
+                    Console.WriteLine($"Pesho used {peshosPunch}" +
+                        $" and reduced Gosho to {goshosHealth} health."); 
+                }
+                else
+                {
+                    peshosHealth = peshosHealth - goshosDamage;
+                    if (peshosHealth <= 0)
+                      {
+                        Console.WriteLine($"Gosho won in {i}th round.");
+                         return;
+                      }           
+                    Console.WriteLine($"Gosho used {goshosPunch}" +
+                        $" and reduced Pesho to {peshosHealth} health.");
+                }
+                if (i % 3 == 0)
+                {
+                    peshosHealth = peshosHealth + 10;
+                    goshosHealth = goshosHealth + 10;
+                }
+            }
+        }
+    }
+}

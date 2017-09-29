@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Demo18._09
+{
+    class HomeWork2109
+    {
+        static void Main(string[] args)
+        {
+
+            string profession = Console.ReadLine();
+            double price ;
+            int quantities = int.Parse(Console.ReadLine());
+
+            if (profession == "Businessman" || profession == "Businesswoman")
+            {
+                price = quantities;
+                if (profession == "Businessman")
+                {
+                    Console.WriteLine($"The {profession} has to pay {price:F2}.");
+                }
+                else
+                {
+                    Console.WriteLine($"The {profession} has to pay {price:F2}.");
+                }
+               
+
+            }
+            else
+            {
+                switch (profession)
+                {
+                    case "Athlete":
+                        
+                        price = quantities * 0.7;
+                        Console.WriteLine($"The {profession} has to pay {price:F2}.");
+                        break;
+                    case "SoftUni Student":
+                        
+                        price = quantities * 1.7;
+                        Console.WriteLine($"The {profession} has to pay {price:F2}.");
+                        break;
+                    default:
+                        
+                        price = quantities * 1.2;
+                        Console.WriteLine($"The {profession} has to pay {price:F2}.");
+                        break;
+                }
+            }
+        }
+    }
+}

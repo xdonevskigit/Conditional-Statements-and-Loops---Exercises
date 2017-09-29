@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Demo18._09
+{
+    class HomeWork2109
+    {
+        static void Main(string[] args)
+        {
+
+            string profession = Console.ReadLine();
+
+            if (profession == "Businessman" || profession == "Businesswoman")
+            {
+                Console.WriteLine("Coffee");
+            }
+            else
+            {
+            switch (profession)
+            {
+                case "Athlete":
+                    Console.WriteLine("Water");
+                    break;
+                case "SoftUni Student":
+                    Console.WriteLine("Beer");
+                    break;
+                default:
+                    Console.WriteLine("Tea");
+                    break;
+            }
+            }
+        }
+    }
+}
